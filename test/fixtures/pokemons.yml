@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  type: 
+  moves: MyString
+  abilities: MyString
+  national_pokedex_num: MyString
+  team: one
+
+two:
+  name: MyString
+  type: 
+  moves: MyString
+  abilities: MyString
+  national_pokedex_num: MyString
+  team: two
