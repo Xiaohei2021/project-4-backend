@@ -23,6 +23,13 @@ class PokemonsController < ApplicationController
         end
     end
 
+    def destroy
+        pokemon = Pokemon.find_by_id(params[:id])
+        pokemon.destroy
+        render json: {message: "This member is send of to paradise island for vacation"}
+
+    end
+
 
     private
 
