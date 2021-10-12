@@ -14,6 +14,15 @@ class PokemonsController < ApplicationController
         end   
     end
 
+    def update
+        pokemon = Pokemon.find_by_id(params[:id])
+        if pokemon.update(pokemon_params)
+            render json: pokemon
+        else
+            render json: {error: "Please check your entered data"}
+        end
+    end
+
 
     private
 
