@@ -19,7 +19,7 @@ class PokemonsController < ApplicationController
         if pokemon.update(pokemon_params)
             render json: pokemon
         else
-            render json: {error: "Please check your entered data"}
+            render json: {error: "Invalid Pokemon data, Please check your entered data"}
         end
     end
 
