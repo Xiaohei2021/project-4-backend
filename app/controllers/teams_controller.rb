@@ -23,8 +23,16 @@ class TeamsController < ApplicationController
         end
     end
 
+    def destroy
+        team = Team.find_by_id(params[:id])
+        team.destroy
+        render json: {message: "Your selected team has been disbanded"}
+
+    end
+
     private
-    def tam_params
+
+    def team_params
         params.require(:team).permit(:name, :leader, :description)
     end
 end
