@@ -6,6 +6,7 @@ class TeamsController < ApplicationController
 
     def create
         team = Team.new(team_params) 
+        # team.pokemons = Pokemon.last
         # byebug
         if team.save
             render json: team
